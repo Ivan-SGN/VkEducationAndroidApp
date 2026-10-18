@@ -1,0 +1,88 @@
+package io.mmaltsev.vkeducation.presentation.applist
+
+val appList: List<AppListItem> = listOf(
+    AppListItem(
+        id = "fa2e31b8-1234-4cf7-9914-108a170a1b01",
+        name = "QuickNote",
+        description = "Быстрые заметки и списки дел с синхронизацией между устройствами",
+        category = "Продуктивность",
+        iconUrl = "https://fastly.picsum.photos/id/237/200/200.jpg?hmac=zHUGikXUDyLCCmvyww1izLK3R3k8oRYBRiTizZEdyfI",
+    ),
+    AppListItem(
+        id = "82ea6f63-2b2a-43e1-b54c-ec62e6e27229",
+        name = "Calmalist",
+        description = "Медитации, дыхательные практики и звуки природы для спокойного сна",
+        category = "Здоровье",
+        iconUrl = "https://fastly.picsum.photos/id/238/200/200.jpg?hmac=O4Jc6lqHVfaKVzLf8bWssNTbWzQoaRUC0TDXod9xDdM",
+    ),
+    AppListItem(
+        id = "c6f64035-c432-4aad-a550-a1dac2d3b047",
+        name = "FitRiver",
+        description = "Трекер шагов, пробежек и тренировок с персональными целями",
+        category = "Спорт",
+        iconUrl = "https://fastly.picsum.photos/id/239/200/200.jpg?hmac=8JqlXUpZ9Xy0H6tMK8sCPQAYU9vUn9Qa8Kg-U9h3sCY",
+    ),
+    AppListItem(
+        id = "d22b7cda-2d36-4ebd-bfa3-be58770fa455",
+        name = "TaskLoop",
+        description = "Планировщик задач для команды: доски, дедлайны и напоминания",
+        category = "Бизнес",
+        iconUrl = "https://fastly.picsum.photos/id/240/200/200.jpg?hmac=PZiJibMUuv5Zpv9MAcqLaCYJOPt-XNuDh3RPBZiGcoY",
+    ),
+    AppListItem(
+        id = "f830e414-42a9-4fe6-af16-555a85f6f6c2",
+        name = "Pixtrix",
+        description = "Фоторедактор с фильтрами, коллажами и ретушью в одно касание",
+        category = "Фото и видео",
+        iconUrl = "https://fastly.picsum.photos/id/241/200/200.jpg?hmac=F-mDYyK1xUiXjlLd5PvE8EQpTwGfFndV7mMaANDtl28",
+    ),
+    AppListItem(
+        id = "ba31ce5d-b214-46e9-bf7c-35e99e70af14",
+        name = "TinyChef",
+        description = "Тысячи пошаговых рецептов и список покупок для каждого блюда",
+        category = "Еда и напитки",
+        iconUrl = "https://fastly.picsum.photos/id/242/200/200.jpg?hmac=Z3aa8zbEQkEMFgnVh0Pn96vmCZHhJ17qzCrePYksrcY",
+    ),
+    AppListItem(
+        id = "204a939c-39fb-4c9d-bed9-daeeba8a465e",
+        name = "GymMate",
+        description = "Дневник силовых тренировок с программами и статистикой прогресса",
+        category = "Спорт",
+        iconUrl = "https://fastly.picsum.photos/id/243/200/200.jpg?hmac=fW5ZwzzyTBy2t2MROp988oq12mZnKwN0coFLhZEE87s",
+    ),
+    AppListItem(
+        id = "1ec98719-1d86-4cdc-b99d-11c6c23d981e",
+        name = "FlowCard",
+        description = "Учёт расходов и доходов, бюджеты и наглядные отчёты по картам",
+        category = "Финансы",
+        iconUrl = "https://fastly.picsum.photos/id/244/200/200.jpg?hmac=Q1gdvE6ZPZUX3nXkxvmzuc12eKVZ9XVEmSH3nCJ2OOo",
+    ),
+    AppListItem(
+        id = "d8180b87-56de-4737-b5ca-953d8c15ec80",
+        name = "DreamSafe",
+        description = "Умный будильник, который анализирует фазы сна и будит вовремя",
+        category = "Здоровье",
+        iconUrl = "https://fastly.picsum.photos/id/2/200/200.jpg?hmac=isSWZUpv7D1D156XcADPOCZlfCG9mmvb8OlXFdvLdK0",
+    ),
+    AppListItem(
+        id = "572a8cc3-662e-47b8-9f69-b8f5454415c4",
+        name = "MoodPin",
+        description = "Дневник настроения: отмечайте эмоции и находите закономерности",
+        category = "Образ жизни",
+        iconUrl = "https://fastly.picsum.photos/id/3/200/200.jpg?hmac=N5yYUNYl5gOUcaMmTtnNNtx839TN2qaNM4SaXhQl65U",
+    ),
+    AppListItem(
+        id = "152b90b4-4632-4acd-b8fd-7ae71bee95e7",
+        name = "Shoply",
+        description = "Покупки в любимых магазинах, скидки и отслеживание доставки",
+        category = "Покупки",
+        iconUrl = "https://fastly.picsum.photos/id/247/200/200.jpg?hmac=oKt3N5MCdI8hCrzIbokjpVNzUuywbK64CJn1bfRAxbA",
+    ),
+    AppListItem(
+        id = "e9b2387e-79c2-4bdb-b6fc-5cb34421bc99",
+        name = "ZenRadio",
+        description = "Онлайн-радио: тысячи станций и подкастов без регистрации",
+        category = "Музыка",
+        iconUrl = "https://fastly.picsum.photos/id/251/200/200.jpg?hmac=_yKttpPQLBisFkKPMRolKUyfZ89QQpENncPdrg8a1J0",
+    ),
+)
