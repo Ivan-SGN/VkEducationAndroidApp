@@ -21,6 +21,7 @@ import io.mmaltsev.vkeducation.presentation.theme.VkEducationTheme
 
 @Composable
 fun AppListScreen(
+    onAppClick: (String) -> Unit,
     modifier: Modifier = Modifier,
 ) {
     val bottomPadding = WindowInsets.navigationBars.asPaddingValues().calculateBottomPadding()
@@ -38,6 +39,7 @@ fun AppListScreen(
             items(appList, key = { it.id }) { item ->
                 AppListItemRow(
                     item = item,
+                    onClick = { onAppClick(item.id) },
                     modifier = Modifier
                         .fillMaxWidth()
                         .padding(horizontal = 16.dp, vertical = 12.dp),
@@ -55,6 +57,6 @@ fun AppListScreen(
 @Composable
 private fun Preview() {
     VkEducationTheme {
-        AppListScreen()
+        AppListScreen(onAppClick = {})
     }
 }

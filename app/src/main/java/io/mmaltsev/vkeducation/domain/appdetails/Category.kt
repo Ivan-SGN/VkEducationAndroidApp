@@ -4,7 +4,7 @@ import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
 @Serializable
-enum class Category {
+enum classCategory {
     @SerialName("Приложения")
     APP,
 
@@ -63,5 +63,20 @@ enum class Category {
     SHOPPING,
 
     @SerialName("Утилиты")
-    UTILITIES
+    UTILITIES,
+
+    @SerialName("Здоровье и фитнес")
+    HEALTH_AND_FITNESS,
+
+    @SerialName("Фото и видео")
+    PHOTO_AND_VIDEO,
+
+    @SerialName("Еда и напитки")
+    FOOD_AND_DRINKS,
+
+    @SerialName("Образ жизни")
+    LIFESTYLE,
+
+    @SerialName("Шопинг")
+    SHOPS,
 }

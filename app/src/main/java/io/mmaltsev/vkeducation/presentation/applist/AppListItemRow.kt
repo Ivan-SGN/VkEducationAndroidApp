@@ -1,5 +1,6 @@
 package io.mmaltsev.vkeducation.presentation.applist
 
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -23,10 +24,11 @@ import io.mmaltsev.vkeducation.presentation.theme.VkEducationTheme
 @Composable
 fun AppListItemRow(
     item: AppListItem,
+    onClick: () -> Unit,
     modifier: Modifier = Modifier,
 ) {
     Row(
-        modifier = modifier,
+        modifier = modifier.clickable(onClick = onClick),
         verticalAlignment = Alignment.CenterVertically,
     ) {
         AsyncImage(
@@ -66,6 +68,9 @@ fun AppListItemRow(
 @Composable
 private fun Preview() {
     VkEducationTheme {
-        AppListItemRow(item = appList.first())
+        AppListItemRow(
+            item = appList.first(),
+            onClick = {},
+        )
     }
 }
