@@ -1,11 +1,14 @@
 package io.mmaltsev.vkeducation.presentation.appdetails
 
 import android.util.Log
+import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import androidx.navigation.toRoute
 import dagger.hilt.android.lifecycle.HiltViewModel
 import io.mmaltsev.vkeducation.domain.appdetails.GetSimilarAppsUseCase
 import io.mmaltsev.vkeducation.domain.appdetails.GetAppDetailsUseCase
+import io.mmaltsev.vkeducation.presentation.navigation.AppDetailsRoute
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.channels.Channel
@@ -21,7 +24,10 @@ import javax.inject.Inject
 class AppDetailsViewModel @Inject constructor(
     private val getAppDetailsUseCase: GetAppDetailsUseCase,
     private val getSimilarAppsUseCase: GetSimilarAppsUseCase,
+    savedStateHandle: SavedStateHandle,
 ) : ViewModel() {
+
+    private val appId = savedStateHandle.toRoute<AppDetailsRoute>().id
 
     private val _state = MutableStateFlow<AppDetailsState>(AppDetailsState.Loading)
     val state = _state.asStateFlow()
@@ -58,7 +64,7 @@ class AppDetailsViewModel @Inject constructor(
 
             try {
                 val similarApps = getSimilarAppsUseCase()
-                getAppDetailsUseCase("fa2e31b8-1234-4cf7-9914-108a170a1b01").collect { appDetails ->
+                getAppDetailsUseCase(appId).collect { appDetails ->
                     val currentState = _state.value
                     _state.value = AppDetailsState.Content(
                         appDetails = appDetails,

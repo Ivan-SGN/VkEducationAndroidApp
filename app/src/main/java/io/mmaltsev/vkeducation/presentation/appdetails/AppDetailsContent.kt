@@ -18,6 +18,7 @@ import androidx.compose.ui.unit.dp
 import io.mmaltsev.vkeducation.domain.appdetails.AppDetails
 import io.mmaltsev.vkeducation.domain.appdetails.SimilarApp
 import io.mmaltsev.vkeducation.domain.appdetails.Category
+import io.mmaltsev.vkeducation.presentation.applist.appList
 import io.mmaltsev.vkeducation.presentation.theme.VkEducationTheme
 
 @Composable
@@ -29,6 +30,7 @@ fun AppDetailsContent(
     onReadMoreClick: () -> Unit,
     onDeveloperClick: () -> Unit,
     onSimilarAppDownloadClick: (SimilarApp) -> Unit,
+    onShowcaseAppClick: () -> Unit,
     modifier: Modifier = Modifier,
 ) {
     val appDetails = content.appDetails
@@ -86,6 +88,12 @@ fun AppDetailsContent(
                 .fillMaxWidth()
                 .padding(start = 16.dp),
         )
+        Spacer(Modifier.height(24.dp))
+        Showcase(
+            apps = appList.take(9),
+            onAppClick = onShowcaseAppClick,
+            modifier = Modifier.fillMaxWidth(),
+        )
     }
 }
 
@@ -126,6 +134,7 @@ private fun Preview() {
             onInstallClick = {},
             onDeveloperClick = {},
             onSimilarAppDownloadClick = {},
+            onShowcaseAppClick = {},
             modifier = Modifier.fillMaxSize(),
         )
     }
